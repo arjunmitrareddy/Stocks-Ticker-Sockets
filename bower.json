@@ -1,0 +1,40 @@
+{
+  "name": "stockticker",
+  "description": "Stock Ticker using Sockets",
+  "main": "server/server.js",
+  "authors": [
+    "Arjun Mitra Reddy Donthala"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "socket.io": "~1.4.6",
+    "angular": "~1.5.7",
+    "bootstrap": "~3.3.6",
+    "angular-route": "~1.5.7",
+    "socket.io-client": "~1.4.8"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css",
+        "less/bootstrap.less"
+      ]
+    },
+    "socket.io-client": {
+      "main": [
+        "socket.io.js"
+      ]
+    }
+  }
+}

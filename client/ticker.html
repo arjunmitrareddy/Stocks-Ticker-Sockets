@@ -1,0 +1,18 @@
+<div style="text-align: center">
+    <h1>Silexx Stock Ticker Project</h1>
+</div>
+<div style="max-width: 100%; margin: 0 auto;">
+    <div>
+        <div class="ticker">
+            <div ng-class="{moving: tckrCtrl.moving}" class="viewport">
+                <div ng-repeat="stock in tckrCtrl.stocks" class="box">
+                    <span>{{stock.title}}</span><br/>
+                    <span ng-if="stock.exchange">Exchange: {{stock.exchange}}</span><br/>
+                    <span ng-if="stock.price">Price: {{stock.price}}</span><br/>
+                    <span ng-if="stock.change" ng-class="{warnChange: stock.change.charAt(0) == '-', successChange: stock.change.charAt(0) == '+'}">Change: {{stock.change}}</span><br/>
+                    <span ng-if="stock.change_percent">Change(%): {{stock.change_percent}}</span><br/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

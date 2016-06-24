@@ -10,7 +10,7 @@
                     <span ng-if="stock.exchange">Exchange: {{stock.exchange}}</span><br/>
                     <span ng-if="stock.price">Price: {{stock.price}}</span><br/>
                     <span ng-if="stock.change" ng-class="{warnChange: stock.change.charAt(0) == '-', successChange: stock.change.charAt(0) == '+'}">Change: {{stock.change}}</span><br/>
-                    <span ng-if="stock.change_percent">Change(%): {{stock.change_percent}}</span><br/>
+                    <span ng-if="stock.change_percent" ng-class="{warnChange: stock.change.charAt(0) == '-', successChange: stock.change.charAt(0) != '-'}">Change(%): {{stock.change_percent}}</span><br/>
                 </div>
             </div>
         </div>

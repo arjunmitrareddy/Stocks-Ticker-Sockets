@@ -11,11 +11,12 @@ var app = express();
 server = http.createServer(app).listen(process.env.PORT || 8080, '0.0.0.0');
 var sio = socketio.listen(server);
 
-var dir = path.resolve(__dirname, '../client/');
-app.use(express.static(path.resolve(__dirname, '../../StockTicker')));
-app.use(express.static(path.resolve(__dirname, '../bower_components/')));
-app.use(express.static(path.resolve(__dirname, '../client/')));
-app.use('/', express.static(path.resolve(__dirname, '../client/index.html')));
+var rootDir = path.resolve(__dirname, '../');
+var clientDir = path.resolve(__dirname, '../client');
+
+app.use(express.static(rootDir));
+app.use(express.static(clientDir));
+app.use('*', express.static(path.resolve(clientDir + '/index.html')));
 
 var FETCH_INTERVAL = 5000;
 

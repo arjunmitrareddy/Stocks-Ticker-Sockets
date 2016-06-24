@@ -7,8 +7,8 @@ var http = require('http'),
     path = require('path'),
     request = require("request");
 require('events').EventEmitter.prototype._maxListeners = 100;
-var app = express(),
-server = http.createServer(app).listen(8080, '0.0.0.0');
+var app = express();
+server = http.createServer(app).listen(process.env.PORT || 8080, '0.0.0.0');
 var sio = socketio.listen(server);
 
 var dir = path.resolve(__dirname, '../client/');

@@ -46,6 +46,8 @@ function get_quote(p_socket, p_ticker) {
     var url = 'https://www.google.com/finance/info?client=ig&q=' + p_ticker;
     request(url, function(error, response, body) {
         if (error) console.log(error);
+        console.log(response.statusCode);
+        if (response.statusCode  != 500) { //Internal Server Error
         try {
         var res = JSON.parse(body.substring(5, body.length-2));
         }
@@ -58,6 +60,7 @@ function get_quote(p_socket, p_ticker) {
         quote.price = res.l_cur;
         quote.change = res.c;
         quote.change_percent = res.cp;
+        console.log(quote);
         p_socket.emit('quote', quote);
         /*quote.last_trade_time = data_object[0].lt;
          quote.dividend = data_object[0].div;
@@ -65,6 +68,7 @@ function get_quote(p_socket, p_ticker) {
         ;*/
 
     }
+        }
     );
 }
 console.log("Server Running on 8080");

@@ -2,7 +2,7 @@
   "name": "stockticker",
   "version": "1.0.0",
   "description": "Stock Ticker using Sockets",
-  "main": "server/server.js",
+  "main": "gulpfile.js",
   "scripts": {
     "start": "node server/server.js",
     "postinstall": "bower install"

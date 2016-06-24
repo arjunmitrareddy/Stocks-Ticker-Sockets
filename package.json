@@ -4,7 +4,7 @@
   "description": "Stock Ticker using Sockets",
   "main": "server/server.js",
   "scripts": {
-    "start": "node src/server/server.js",
+    "start": "node server/server.js",
     "postinstall": "bower install"
   },
   "author": "Arjun Mitra Reddy Donthala",

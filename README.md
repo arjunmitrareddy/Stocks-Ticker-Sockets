@@ -2,7 +2,7 @@
 
 ##[DEMO](https://arjunsilexstocks.herokuapp.com/)
 
-Simple Stocks Ticker Application. Querying the Google Stocks API and updating information in the front end frequently over web sockets.
+Simple Stocks Ticker Application. Querying the Google Stocks API from the server and updating information in the client frequently over web sockets.
 
 ##Technologies Used:
 - AngularJS

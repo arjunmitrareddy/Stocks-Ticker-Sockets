@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "node server/server.js",
-    "postinstall": "bower install && gulp wire-dep"
+    "postinstall": "bower install"
   },
   "author": "Arjun Mitra Reddy Donthala",
   "license": "ISC",
